@@ -17,8 +17,6 @@
 </head>
 
 <body>
-
-
   <!-- 头部区域 -->
   <header id="header">
     <!-- <div class="topbar hidden-sm hidden-xs"> -->
@@ -43,12 +41,12 @@
           </div>
           <div class="col-md-3 text-center">
             <a href="#" class="btn btn-itcast btn-sm">免费注册</a>
-            <a href="#" class="btn btn-link btn-sm">登录</a>
+            <a href="#" class="btn btn-link btn-sm" data-toggle="modal" data-target="#login_form">登录</a>
           </div>
         </div>
       </div>
     </div>
-    <nav class="navbar navbar-itcast navbar-static-top">
+    <nav class="navbar navbar-itcast navbar-static-top" data-spy="affix" data-offset-top="125">
       <div class="container">
         <div class="navbar-header">
           <!-- 🍔菜单 -->
@@ -208,110 +206,239 @@
   <section id="products">
     <!-- bootstrapjs组件标签页 -->
     <div class="container">
+      <!--
+      1. 要给ul加一个容器，这个容器有横向滚动条
+      2. 动态设置ul的宽度，宽度是根据内容大小决定的
+        width= sum (li.width)
+     -->
       <!-- 选项卡标题 -->
-      <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#category_01" aria-controls="category_01" role="tab"
-            data-toggle="tab" aria-expanded="false">特别推荐</a></li>
-        <li role="presentation"><a href="#category_02" aria-controls="category_02" role="tab" data-toggle="tab"
-            aria-expanded="true">微投资</a></li>
-        <li role="presentation"><a href="#category_03" aria-controls="category_03" role="tab" data-toggle="tab"
-            aria-expanded="false">微小宝</a></li>
-        <li role="presentation"><a href="#category_04" aria-controls="category_04" role="tab" data-toggle="tab"
-            aria-expanded="false">微消费</a></li>
-        <li role="presentation"><a href="#category_05" aria-controls="category_05" role="tab" data-toggle="tab"
-            aria-expanded="false">微增利</a></li>
-        <li role="presentation"><a href="#category_06" aria-controls="category_06" role="tab" data-toggle="tab">微金宝</a>
-        </li>
-        <li role="presentation"><a href="#category_07" aria-controls="category_07" role="tab" data-toggle="tab">微转让</a>
-        </li>
-        <li class="pull-right"><a href="#">更多</a></li>
-      </ul>
+      <div class="ul-wapper">
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#category_01" aria-controls="category_01" role="tab"
+              data-toggle="tab" aria-expanded="false">特别推荐</a></li>
+          <li role="presentation"><a href="#category_02" aria-controls="category_02" role="tab" data-toggle="tab"
+              aria-expanded="true">微投资</a></li>
+          <li role="presentation"><a href="#category_03" aria-controls="category_03" role="tab" data-toggle="tab"
+              aria-expanded="false">微小宝</a></li>
+          <li role="presentation"><a href="#category_04" aria-controls="category_04" role="tab" data-toggle="tab"
+              aria-expanded="false">微消费</a></li>
+          <li role="presentation"><a href="#category_05" aria-controls="category_05" role="tab" data-toggle="tab"
+              aria-expanded="false">微增利</a></li>
+          <li role="presentation"><a href="#category_06" aria-controls="category_06" role="tab"
+              data-toggle="tab">微金宝</a>
+          </li>
+          <li role="presentation"><a href="#category_07" aria-controls="category_07" role="tab"
+              data-toggle="tab">微转让</a>
+          </li>
+          <li class="pull-right"><a href="#">更多</a></li>
+        </ul>
+      </div>
+
       <!-- 所有的选项卡内容 -->
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane fade in active" id="category_01">
           <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <!-- bootstrap组件面板panel -->
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
               <div class="panel panel-czbk actived">
-                <div class="panel-heading">Panel heading without title</div>
+                <div class="panel-heading">
+                  <p class="tooltips">
+                    <a class="badge badge-one" data-toggle="tooltip" data-placement="top" title="北京欢迎你"
+                      href="https://github.com/Shawnxh">京</a>
+                    <a class="badge badge-two" data-toggle="tooltip" data-placement="top" title="上海欢迎你" href="#">沪</a>
+                  </p>
+                  <p><strong>8</strong><sub>%</sub></p>
+                  <p><span>年利率</span></p>
+                </div>
                 <div class="panel-body">
-                  <h4>体验表0008期</h4>
+                  <h4>新手体验表0008期</h4>
                   <div class="row">
                     <div class="col-xs-6 text-left">
                       <p>起步价</p>
-                      <p><strong>1000</strong><sub>万</sub></p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
                     </div>
                     <div class="col-xs-6 text-right">
                       <p>起步价</p>
-                      <p><strong>1000</strong><sub>万</sub></p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
                     </div>
                     <div class="col-xs-6 text-left">
                       <p>起步价</p>
-                      <p><strong>1000</strong><sub>万</sub></p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
                     </div>
                     <div class="col-xs-6 text-right">
                       <p>起步价</p>
-                      <p><strong>1000</strong><sub>万</sub></p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="panel panel-czbk disabled">
-                <div class="panel-heading">Panel heading without title</div>
-                <div class="panel-body">
-                  Panel content
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
               <div class="panel panel-czbk">
-                <div class="panel-heading">Panel heading without title</div>
+                <div class="panel-heading">
+                  <p class="tooltips">
+                    <a class="badge badge-one" data-toggle="tooltip" data-placement="top" title="北京欢迎你"
+                      href="https://github.com/Shawnxh">京</a>
+                    <a class="badge badge-two" data-toggle="tooltip" data-placement="top" title="上海欢迎你" href="#">沪</a>
+                  </p>
+                  <p><strong>8</strong><sub>%</sub></p>
+                  <p><span>年利率</span></p>
+                </div>
                 <div class="panel-body">
-                  <h4>体验表0008期</h4>
+                  <h4>新手体验表0008期</h4>
                   <div class="row">
                     <div class="col-xs-6 text-left">
                       <p>起步价</p>
-                      <p><strong>1000</strong><sub>万</sub></p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
                     </div>
                     <div class="col-xs-6 text-right">
                       <p>起步价</p>
-                      <p><strong>1000</strong><sub>万</sub></p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
                     </div>
                     <div class="col-xs-6 text-left">
                       <p>起步价</p>
-                      <p><strong>1000</strong><sub>万</sub></p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
                     </div>
                     <div class="col-xs-6 text-right">
                       <p>起步价</p>
-                      <p><strong>1000</strong><sub>万</sub></p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="panel panel-czbk disabled">
-                <div class="panel-heading">Panel heading without title</div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="panel panel-czbk">
+                <div class="panel-heading">
+                  <p class="tooltips">
+                    <a class="badge badge-one" data-toggle="tooltip" data-placement="top" title="北京欢迎你"
+                      href="https://github.com/Shawnxh">京</a>
+                    <a class="badge badge-two" data-toggle="tooltip" data-placement="top" title="上海欢迎你" href="#">沪</a>
+                  </p>
+                  <p><strong>8</strong><sub>%</sub></p>
+                  <p><span>年利率</span></p>
+                </div>
                 <div class="panel-body">
-                  Panel content
+                  <h4>新手体验表0008期</h4>
+                  <div class="row">
+                    <div class="col-xs-6 text-left">
+                      <p>起步价</p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起步价</p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
+                    </div>
+                    <div class="col-xs-6 text-left">
+                      <p>起步价</p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起步价</p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="panel panel-czbk disabled">
-                <div class="panel-heading">Panel heading without title</div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="panel panel-czbk">
+                <div class="panel-heading">
+                  <p class="tooltips">
+                    <a class="badge badge-one" data-toggle="tooltip" data-placement="top" title="北京欢迎你"
+                      href="https://github.com/Shawnxh">京</a>
+                    <a class="badge badge-two" data-toggle="tooltip" data-placement="top" title="上海欢迎你" href="#">沪</a>
+                  </p>
+                  <p><strong>8</strong><sub>%</sub></p>
+                  <p><span>年利率</span></p>
+                </div>
                 <div class="panel-body">
-                  Panel content
+                  <h4>新手体验表0008期</h4>
+                  <div class="row">
+                    <div class="col-xs-6 text-left">
+                      <p>起步价</p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起步价</p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
+                    </div>
+                    <div class="col-xs-6 text-left">
+                      <p>起步价</p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起步价</p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="panel panel-czbk disabled">
-                <div class="panel-heading">Panel heading without title</div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="panel panel-czbk">
+                <div class="panel-heading">
+                  <p class="tooltips">
+                    <a class="badge badge-one" data-toggle="tooltip" data-placement="top" title="北京欢迎你"
+                      href="https://github.com/Shawnxh">京</a>
+                    <a class="badge badge-two" data-toggle="tooltip" data-placement="top" title="上海欢迎你" href="#">沪</a>
+                  </p>
+                  <p><strong>8</strong><sub>%</sub></p>
+                  <p><span>年利率</span></p>
+                </div>
                 <div class="panel-body">
-                  Panel content
+                  <h4>新手体验表0008期</h4>
+                  <div class="row">
+                    <div class="col-xs-6 text-left">
+                      <p>起步价</p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起步价</p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
+                    </div>
+                    <div class="col-xs-6 text-left">
+                      <p>起步价</p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起步价</p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="panel panel-czbk">
+                <div class="panel-heading">
+                  <p class="tooltips">
+                    <a class="badge badge-one" data-toggle="tooltip" data-placement="top" title="北京欢迎你"
+                      href="https://github.com/Shawnxh">京</a>
+                    <a class="badge badge-two" data-toggle="tooltip" data-placement="top" title="上海欢迎你" href="#">沪</a>
+                  </p>
+                  <p><strong>8</strong><sub>%</sub></p>
+                  <p><span>年利率</span></p>
+                </div>
+                <div class="panel-body">
+                  <h4>新手体验表0008期</h4>
+                  <div class="row">
+                    <div class="col-xs-6 text-left">
+                      <p>起步价</p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起步价</p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
+                    </div>
+                    <div class="col-xs-6 text-left">
+                      <p>起步价</p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起步价</p>
+                      <p><strong>1000.00</strong><sub>万</sub></p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -329,13 +456,152 @@
   </section>
   <!-- /产品推荐 -->
   <!-- 新闻列表 -->
-  <section></section>
+  <section id="news">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2 col-sm-offset-3">
+          <div class="news-title">全部新闻</div>
+        </div>
+        <div class="col-sm-1 text-center-self text-center">
+          <ul class="nav nav-pills nav-stacked">
+            <li role="presentation" class="active"><a data-title="全部新闻" href="#news01" data-toggle="tab" role="tab"><i
+                  class="icon-news01"></i></a></li>
+            <li role="presentation"><a data-title="媒体新闻" href="#news02" data-toggle="tab" role="tab"><i
+                  class="icon-news02"></i></a></li>
+            <li role="presentation"><a data-title="行业资讯" href="#news03" data-toggle="tab" role="tab"><i
+                  class="icon-news03"></i></a></li>
+            <li role="presentation"><a data-title="其他" href="#news04" data-toggle="tab" role="tab"><i
+                  class="icon-news04"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6">
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active text-center-self" id="news01">
+              <ul>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+              </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="news02">
+              <ul>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+              </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="news03">
+              <ul>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+              </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="news04">
+              <ul>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+                <li>你喜欢大海,我爱过你!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- /新闻列表 -->
   <!-- 合作伙伴 -->
-  <section></section>
+  <section id="hzhb" class="hidden-sm hidden-xs">
+    <div class="container text-center">
+      <h3>合作伙伴</h3>
+      <ul class="center-block clearfix">
+        <li><a href="#"><i class="icon-uniE930"></i></a></li>
+        <li><a href="#"><i class="icon-uniE92F"></i></a></li>
+        <li><a href="#"><i class="icon-uniE92E"></i></a></li>
+        <li><a href="#"><i class="icon-uniE92A"></i></a></li>
+        <li><a href="#"><i class="icon-uniE929"></i></a></li>
+        <li><a href="#"><i class="icon-uniE931"></i></a></li>
+        <li><a href="#"><i class="icon-uniE92C"></i></a></li>
+        <li><a href="#"><i class="icon-uniE92B"></i></a></li>
+        <li><a href="#"><i class="icon-uniE92D"></i></a></li>
+      </ul>
+    </div>
+  </section>
   <!-- /合作伙伴 -->
   <!-- 脚注区域 -->
-  <footer></footer>
+  <footer id="footer"></footer>
+  <!-- Modal -->
+  <div class="modal fade" id="login_form" tabindex="-1" role="dialog" aria-labelledby="login_form_title">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="login_form_title">登录</h4>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-9">
+                <input type="email" class="form-control" id="inputEmail" placeholder="Please enter email address">
+              </div>
+              <div class="col-sm-1"></div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+              <div class="col-sm-9">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Enter your Pin">
+              </div>
+              <div class="col-sm-1"></div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Remember me
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Sign in</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- /脚注区域 -->
   <script src="lib/jquery/jquery.js"></script>
   <script src="lib/bootstrap/js/bootstrap.js"></script>
